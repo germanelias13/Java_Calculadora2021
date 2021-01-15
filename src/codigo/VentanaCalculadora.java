@@ -161,6 +161,11 @@ public class VentanaCalculadora extends javax.swing.JFrame {
 
         BotonIgual.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
         BotonIgual.setText("=");
+        BotonIgual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonIgualActionPerformed(evt);
+            }
+        });
 
         Boton3.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
         Boton3.setText("3");
@@ -347,6 +352,23 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     private void BotonMasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonMasActionPerformed
         operacionPulsada("+");
     }//GEN-LAST:event_BotonMasActionPerformed
+
+    private void BotonIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonIgualActionPerformed
+        //el boton igual tiene que saber que operacion se pulso
+        //como ese valor lo guarde en la variable operacion,
+        //monto un if para que dependiendo de ese valor se realice
+        //la operacion correspondiente
+        
+        //primero guardo lo que halla en la pantalla en una variable double
+        double operando2 = Double.valueOf(display.getText());
+        //si la operacion es una suma
+        if (operacion.equals("+")){
+            operando1 = operando1 + operando2;
+        }
+        
+        //por ultimo, muestro el resultado en la pantalla
+        display.setText(String.valueOf(operando1));
+    }//GEN-LAST:event_BotonIgualActionPerformed
 
     /**
      * @param args the command line arguments
