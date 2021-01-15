@@ -73,7 +73,7 @@
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="BotonParentesisIzq" min="-2" pref="75" max="-2" attributes="0"/>
-                                  <Component id="BotonC" min="-2" pref="75" max="-2" attributes="0"/>
+                                  <Component id="BotonDEL" min="-2" pref="75" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                           </Group>
@@ -97,7 +97,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="display" min="-2" pref="71" max="-2" attributes="0"/>
-              <EmptySpace type="separate" pref="26" max="32767" attributes="0"/>
+              <EmptySpace type="separate" pref="24" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -126,7 +126,7 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="BotonC" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="BotonDEL" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
                           <Component id="BotonAC" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -301,6 +301,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="+"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonMasActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="BotonPor">
       <Properties>
@@ -310,12 +313,12 @@
         <Property name="text" type="java.lang.String" value="x"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="BotonC">
+    <Component class="javax.swing.JButton" name="BotonDEL">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="28" style="1"/>
+          <Font name="Times New Roman" size="20" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="C"/>
+        <Property name="text" type="java.lang.String" value="DEL"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="BotonParentesisIzq">
@@ -345,7 +348,7 @@
     <Component class="javax.swing.JButton" name="BotonAC">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="28" style="1"/>
+          <Font name="Times New Roman" size="20" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="AC"/>
       </Properties>

@@ -24,12 +24,23 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     }
     
     public void escribeNumeroEnPantalla(String numero){
-   if (display.getText() == "0"){
-       display.setText(numero);
-       }
-   else{
-        display.setText(display.getText() + numero);
+        if ( !display.getText() .equals ("0")){
+            display.setText(display.getText() + numero);
+        }
+        else{
+            display.setText(numero);
+            }
     }
+    //la funcion que se encarga de trabajar la operacion pulsada
+    public void operacionPulsada(String _operacion){
+        //guardo el valor de la pantalla en la variable operando1
+        operando1 = Double.valueOf(display.getText());
+        
+        //pongo a cero la pantalla
+        display.setText("0");
+        
+        //guardo la operacion que he pulsado
+        operacion = _operacion;
     }
     
 
@@ -57,7 +68,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         Boton3 = new javax.swing.JButton();
         BotonMas = new javax.swing.JButton();
         BotonPor = new javax.swing.JButton();
-        BotonC = new javax.swing.JButton();
+        BotonDEL = new javax.swing.JButton();
         BotonParentesisIzq = new javax.swing.JButton();
         BotonMenos = new javax.swing.JButton();
         BotonDivision = new javax.swing.JButton();
@@ -161,12 +172,17 @@ public class VentanaCalculadora extends javax.swing.JFrame {
 
         BotonMas.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
         BotonMas.setText("+");
+        BotonMas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonMasActionPerformed(evt);
+            }
+        });
 
         BotonPor.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
         BotonPor.setText("x");
 
-        BotonC.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
-        BotonC.setText("C");
+        BotonDEL.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
+        BotonDEL.setText("DEL");
 
         BotonParentesisIzq.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
         BotonParentesisIzq.setText("(");
@@ -177,7 +193,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         BotonDivision.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
         BotonDivision.setText("÷");
 
-        BotonAC.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
+        BotonAC.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
         BotonAC.setText("AC");
 
         BotonParentesisDer.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
@@ -228,7 +244,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(BotonParentesisIzq, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(BotonC, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(BotonDEL, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(1, 1, 1)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -244,7 +260,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(display, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 26, Short.MAX_VALUE)
+                .addGap(18, 24, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -268,7 +284,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
                             .addComponent(BotonIgual, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(BotonC, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BotonDEL, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(BotonAC, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -328,6 +344,10 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         escribeNumeroEnPantalla("0");
     }//GEN-LAST:event_Boton0ActionPerformed
 
+    private void BotonMasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonMasActionPerformed
+        operacionPulsada("+");
+    }//GEN-LAST:event_BotonMasActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -375,8 +395,8 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     private javax.swing.JButton Boton8;
     private javax.swing.JButton Boton9;
     private javax.swing.JButton BotonAC;
-    private javax.swing.JButton BotonC;
     private javax.swing.JButton BotonComa;
+    private javax.swing.JButton BotonDEL;
     private javax.swing.JButton BotonDivision;
     private javax.swing.JButton BotonIgual;
     private javax.swing.JButton BotonMas;
