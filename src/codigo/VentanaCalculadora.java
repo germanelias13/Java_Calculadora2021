@@ -24,11 +24,11 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     }
     
     public void escribeNumeroEnPantalla(String numero){
-        if ( !display.getText() .equals ("0")){
-            display.setText(display.getText() + numero);
+        if (display.getText() .equals ("0")){
+            display.setText(numero);
         }
         else{
-            display.setText(numero);
+            display.setText(display.getText() + numero);
             }
     }
     //la funcion que se encarga de trabajar la operacion pulsada
@@ -41,6 +41,11 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         
         //guardo la operacion que he pulsado
         operacion = _operacion;
+    }
+    
+    //para poner a cero la pantalla
+    public void AC (String _reset){
+    display.setText ("0");
     }
     
 
@@ -61,19 +66,17 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         Boton4 = new javax.swing.JButton();
         Boton1 = new javax.swing.JButton();
         Boton6 = new javax.swing.JButton();
-        BotonComa = new javax.swing.JButton();
         Boton2 = new javax.swing.JButton();
         Boton0 = new javax.swing.JButton();
         BotonIgual = new javax.swing.JButton();
         Boton3 = new javax.swing.JButton();
         BotonMas = new javax.swing.JButton();
         BotonPor = new javax.swing.JButton();
-        BotonDEL = new javax.swing.JButton();
-        BotonParentesisIzq = new javax.swing.JButton();
+        BotonElevadoA2 = new javax.swing.JButton();
+        BotonRaizCuadrada = new javax.swing.JButton();
         BotonMenos = new javax.swing.JButton();
         BotonDivision = new javax.swing.JButton();
         BotonAC = new javax.swing.JButton();
-        BotonParentesisDer = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -140,9 +143,6 @@ public class VentanaCalculadora extends javax.swing.JFrame {
             }
         });
 
-        BotonComa.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
-        BotonComa.setText(".");
-
         Boton2.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
         Boton2.setText("2");
         Boton2.addActionListener(new java.awt.event.ActionListener() {
@@ -185,24 +185,51 @@ public class VentanaCalculadora extends javax.swing.JFrame {
 
         BotonPor.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
         BotonPor.setText("x");
+        BotonPor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonPorActionPerformed(evt);
+            }
+        });
 
-        BotonDEL.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
-        BotonDEL.setText("DEL");
+        BotonElevadoA2.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
+        BotonElevadoA2.setText("^2");
+        BotonElevadoA2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonElevadoA2ActionPerformed(evt);
+            }
+        });
 
-        BotonParentesisIzq.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
-        BotonParentesisIzq.setText("(");
+        BotonRaizCuadrada.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
+        BotonRaizCuadrada.setText("√");
+        BotonRaizCuadrada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonRaizCuadradaActionPerformed(evt);
+            }
+        });
 
         BotonMenos.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
         BotonMenos.setText("-");
+        BotonMenos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonMenosActionPerformed(evt);
+            }
+        });
 
         BotonDivision.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
         BotonDivision.setText("÷");
+        BotonDivision.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonDivisionActionPerformed(evt);
+            }
+        });
 
         BotonAC.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
         BotonAC.setText("AC");
-
-        BotonParentesisDer.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
-        BotonParentesisDer.setText(")");
+        BotonAC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonACActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -213,50 +240,48 @@ public class VentanaCalculadora extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Boton4, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(Boton5, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Boton0, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(BotonComa, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(13, 13, 13)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Boton6, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(BotonIgual, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Boton1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Boton2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Boton3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(Boton7, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(Boton8, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(Boton9, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(8, 8, 8)))
-                        .addGap(42, 42, 42)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGap(50, 50, 50))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(1, 1, 1)
-                                .addComponent(BotonMas, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(BotonPor, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(Boton4, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Boton5, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(13, 13, 13)
+                                        .addComponent(Boton6, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(Boton1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Boton2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Boton3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(Boton0, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(BotonIgual, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(42, 42, 42)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(BotonParentesisIzq, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(BotonDEL, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(1, 1, 1)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                                .addComponent(BotonRaizCuadrada, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(BotonMas, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(BotonPor, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(BotonMenos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BotonParentesisDer, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(BotonDivision, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BotonAC, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(BotonAC, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BotonElevadoA2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(display, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -285,16 +310,13 @@ public class VentanaCalculadora extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Boton0, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BotonComa, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(BotonIgual, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(BotonDEL, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BotonAC, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(BotonAC, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(BotonParentesisIzq, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BotonParentesisDer, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(BotonRaizCuadrada, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BotonElevadoA2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(BotonPor, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -365,10 +387,54 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         if (operacion.equals("+")){
             operando1 = operando1 + operando2;
         }
+        //si la operacion es resta
+        if (operacion.equals("-")){
+            operando1 = operando1 - operando2;
+        }
+        //si la operacion es multiplicacion
+        if (operacion.equals("x")){
+            operando1 = operando1 * operando2;
+        }
+        //si la operacion es division
+        if (operacion.equals("÷")){
+            operando1 = operando1 / operando2;
+        }
+        //si la operacion es raiz cuadrada
+        if (operacion.equals("√")){
+            operando1 = Math.sqrt(operando1);
+        }
+        if (operacion.equals("^2")){
+            operando1 = operando1 * operando1;
+        }
+        
         
         //por ultimo, muestro el resultado en la pantalla
         display.setText(String.valueOf(operando1));
     }//GEN-LAST:event_BotonIgualActionPerformed
+
+    private void BotonMenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonMenosActionPerformed
+        operacionPulsada("-");
+    }//GEN-LAST:event_BotonMenosActionPerformed
+
+    private void BotonPorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonPorActionPerformed
+        operacionPulsada("x");
+    }//GEN-LAST:event_BotonPorActionPerformed
+
+    private void BotonDivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonDivisionActionPerformed
+        operacionPulsada("÷");
+    }//GEN-LAST:event_BotonDivisionActionPerformed
+
+    private void BotonACActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonACActionPerformed
+        AC("_reset");
+    }//GEN-LAST:event_BotonACActionPerformed
+
+    private void BotonRaizCuadradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRaizCuadradaActionPerformed
+        operacionPulsada("√");
+    }//GEN-LAST:event_BotonRaizCuadradaActionPerformed
+
+    private void BotonElevadoA2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonElevadoA2ActionPerformed
+        operacionPulsada("^2");
+    }//GEN-LAST:event_BotonElevadoA2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -417,15 +483,13 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     private javax.swing.JButton Boton8;
     private javax.swing.JButton Boton9;
     private javax.swing.JButton BotonAC;
-    private javax.swing.JButton BotonComa;
-    private javax.swing.JButton BotonDEL;
     private javax.swing.JButton BotonDivision;
+    private javax.swing.JButton BotonElevadoA2;
     private javax.swing.JButton BotonIgual;
     private javax.swing.JButton BotonMas;
     private javax.swing.JButton BotonMenos;
-    private javax.swing.JButton BotonParentesisDer;
-    private javax.swing.JButton BotonParentesisIzq;
     private javax.swing.JButton BotonPor;
+    private javax.swing.JButton BotonRaizCuadrada;
     private javax.swing.JLabel display;
     // End of variables declaration//GEN-END:variables
 }

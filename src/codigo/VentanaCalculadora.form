@@ -28,62 +28,60 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="Boton4" min="-2" pref="75" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="Boton5" min="-2" pref="75" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="Boton0" min="-2" pref="75" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="BotonComa" min="-2" pref="75" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="Boton6" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
-                                  <Component id="BotonIgual" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="Boton1" min="-2" pref="75" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="Boton2" min="-2" pref="75" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="Boton3" min="-2" pref="75" max="-2" attributes="0"/>
-                          </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="Boton7" min="-2" pref="75" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="Boton8" min="-2" pref="75" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="Boton9" min="-2" pref="75" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                           </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                              <Component id="BotonMas" min="-2" pref="75" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="BotonPor" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="BotonParentesisIzq" min="-2" pref="75" max="-2" attributes="0"/>
-                                  <Component id="BotonDEL" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Boton4" min="-2" pref="75" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="Boton5" min="-2" pref="75" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                                      <Component id="Boton6" min="-2" pref="75" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Boton1" min="-2" pref="75" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="Boton2" min="-2" pref="75" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="Boton3" min="-2" pref="75" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Boton0" min="-2" pref="75" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="BotonIgual" min="-2" pref="163" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="19" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="BotonRaizCuadrada" min="-2" pref="75" max="-2" attributes="0"/>
+                              <EmptySpace pref="20" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                                      <Component id="BotonMas" min="-2" pref="75" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="BotonPor" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="19" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="BotonMenos" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
-                          <Component id="BotonParentesisDer" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
                           <Component id="BotonDivision" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
                           <Component id="BotonAC" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="BotonElevadoA2" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Component id="display" max="32767" attributes="0"/>
@@ -120,19 +118,15 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="Boton0" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
-                          <Component id="BotonComa" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
                           <Component id="BotonIgual" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="BotonDEL" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
-                          <Component id="BotonAC" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="BotonAC" min="-2" pref="75" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="BotonParentesisIzq" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
-                          <Component id="BotonParentesisDer" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="BotonRaizCuadrada" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="BotonElevadoA2" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -245,14 +239,6 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Boton6ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="BotonComa">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="28" style="1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="."/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JButton" name="Boton2">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -315,22 +301,31 @@
         </Property>
         <Property name="text" type="java.lang.String" value="x"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonPorActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="BotonDEL">
+    <Component class="javax.swing.JButton" name="BotonElevadoA2">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="20" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="DEL"/>
+        <Property name="text" type="java.lang.String" value="^2"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonElevadoA2ActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="BotonParentesisIzq">
+    <Component class="javax.swing.JButton" name="BotonRaizCuadrada">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="28" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="("/>
+        <Property name="text" type="java.lang.String" value="&#x221a;"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonRaizCuadradaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="BotonMenos">
       <Properties>
@@ -339,6 +334,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="-"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonMenosActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="BotonDivision">
       <Properties>
@@ -347,6 +345,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="&#xf7;"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonDivisionActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="BotonAC">
       <Properties>
@@ -355,14 +356,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="AC"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="BotonParentesisDer">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="28" style="1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value=")"/>
-      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonACActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
